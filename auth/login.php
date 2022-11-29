@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: ../pages/dashboard/dashboard.php");
+    header("location: ../pages/welcome.php");
     exit;
 }
  
@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             //redirect
-                            header("location: ../pages/dashboard/dashboard.php");
+                            header("location: ../pages/welcome.php");
                         }
                         else{
 
